@@ -1,0 +1,23 @@
+<% include ../partials/header.ejs %>
+<h1>Editar Professor</h1>
+<p><a href="/professores">Voltar a lista de professores</a></p>
+<table class="table table-sm table-bordered">
+<form method="post">
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" value="<%= professor.Nome %>">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="cpf">CPF</label>
+    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="cpf" value="<%= professor.cpf %>">
+  </div>
+</div>
+<div class="form-group">
+  <label for="graduacao">Graduação</label>
+  <input type="text" class="form-control" id="graduacao" name="graduacao" placeholder="graduação" value="<%= professor.graduacao %>">
+</div>
+<button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+</table>
+<% include ../partials/footer.ejs %>

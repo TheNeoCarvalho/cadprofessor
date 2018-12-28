@@ -1,0 +1,23 @@
+<% include ../partials/header.ejs %>
+<h1>Professores</h1>
+<p><a href="/professores/create" class="btn btn-dark mt-5">Novo Professor</a></p>
+<table class="table table-sm table-bordered">
+    <thead class="thread-dark">
+        <tr>
+            <th>Nome</th><!--Cabeçalho-->
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <% professores.map( professor => { %>
+    <tr>
+       <td><%= professor.Nome %></td><!--É exibido o nome de cada professor-->
+       <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a type="button" class="btn btn-secondary" href="/professores/update/<%= professor.id %>">Editar</a>
+                <a type="button" class="btn btn-secondary" href="/professores/excluir/<%= professor.id %>" onclick="return confirm('Deseja realmente excluir?')">Excluir</a>
+            </div> 
+       </td>
+    </tr>    
+    <% }) %>
+</table>
+<% include ../partials/footer.ejs %>
