@@ -54,7 +54,7 @@ const excluir = (connection, id) => {
         if (err) {
           reject(err);
         } else {
-          resolve(results[0]);
+          resolve();
         }
       }
     );
